@@ -90,7 +90,7 @@ export const DashboardMock: React.FC = () => {
             <div className="lg:col-span-2 bg-slate-950 border border-slate-800 rounded-2xl p-5 space-y-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Consultant Field Productivity</h4>
+                  <div className="text-sm font-semibold text-white">Consultant Field Productivity</div>
                   <p className="text-[10px] text-slate-500">Live field plan completion rates today</p>
                 </div>
                 <span className="text-xs text-blue-500 hover:underline cursor-pointer flex items-center gap-1">
@@ -129,7 +129,7 @@ export const DashboardMock: React.FC = () => {
 
             {/* Campaign Pipeline Summary */}
             <div className="bg-slate-950 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h4 className="text-sm font-semibold text-white">Lead Capture Funnel</h4>
+              <div className="text-sm font-semibold text-white">Lead Capture Funnel</div>
               <div className="space-y-4">
                 {[
                   { label: 'Prospects Met', value: '450', barWidth: 'w-full' },
@@ -156,7 +156,7 @@ export const DashboardMock: React.FC = () => {
           <div className="bg-slate-950 border border-slate-800 rounded-2xl p-5 space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <h4 className="text-sm font-semibold text-white">Collections Working Queue & Approvals</h4>
+                <div className="text-sm font-semibold text-white">Collections Working Queue & Approvals</div>
                 <p className="text-[10px] text-slate-500">Auto-allocated field collections requiring manager posting</p>
               </div>
               <div className="flex gap-2">
@@ -204,7 +204,7 @@ export const DashboardMock: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Cash & Audit Trail */}
             <div className="bg-slate-950 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h4 className="text-sm font-semibold text-white">Daily Branch Reconciliation</h4>
+              <div className="text-sm font-semibold text-white">Daily Branch Reconciliation</div>
               <div className="space-y-3.5">
                 {[
                   { desc: 'Opening Balance Confirmed', time: '07:30 AM', amt: '+R25,000.00', status: 'Verified', statusColor: 'text-emerald-400' },
@@ -227,7 +227,7 @@ export const DashboardMock: React.FC = () => {
 
             {/* Audit Log / Access Compliance */}
             <div className="bg-slate-950 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h4 className="text-sm font-semibold text-white">Branch Vault Compliance</h4>
+              <div className="text-sm font-semibold text-white">Branch Vault Compliance</div>
               <div className="space-y-4">
                 <div className="p-3 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-between text-xs">
                   <div className="flex items-center gap-2">

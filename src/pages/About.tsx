@@ -98,8 +98,8 @@ export const About: React.FC = () => {
           </p>
           <div className="pt-2">
             <Link to="/contact">
-              <Button variant="white" className="font-bold text-blue-650 hover:bg-slate-100">
-                Book a Consultation
+              <Button as="span" variant="white" className="font-bold text-blue-650 hover:bg-slate-100">
+                Book a Live Demo
               </Button>
             </Link>
           </div>

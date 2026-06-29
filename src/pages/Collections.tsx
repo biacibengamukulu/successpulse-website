@@ -73,7 +73,7 @@ export const Collections: React.FC = () => {
                 <h3 className="text-sm font-bold">Ledger Import & Allocation Console</h3>
                 <p className="text-[10px] text-slate-500">Import sheets & auto-assign to branches</p>
               </div>
-              <Button variant="primary" size="sm" className="text-xs gap-1.5 py-1.5 px-3">
+              <Button as="span" variant="primary" size="sm" className="text-xs gap-1.5 py-1.5 px-3">
                 <Upload className="h-3.5 w-3.5" /> Import Excel
               </Button>
             </div>
@@ -203,8 +203,8 @@ export const Collections: React.FC = () => {
           </p>
           <div className="pt-2">
             <Link to="/contact">
-              <Button variant="white" className="font-bold text-blue-650 hover:bg-slate-100">
-                Book a Consultation
+              <Button as="span" variant="white" className="font-bold text-blue-650 hover:bg-slate-100">
+                Book a Live Demo
               </Button>
             </Link>
           </div>

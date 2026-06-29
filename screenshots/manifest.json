@@ -1,0 +1,38 @@
+[
+  {
+    "url": "http://127.0.0.1:4173/",
+    "file": "screenshots/01-home.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/platform",
+    "file": "screenshots/02-platform.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/campaigns",
+    "file": "screenshots/03-campaigns.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/collections",
+    "file": "screenshots/04-collections.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/branch-ops",
+    "file": "screenshots/05-branch-ops.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/pricing",
+    "file": "screenshots/06-pricing.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/roadmap",
+    "file": "screenshots/07-roadmap.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/about",
+    "file": "screenshots/08-about.png"
+  },
+  {
+    "url": "http://127.0.0.1:4173/contact",
+    "file": "screenshots/09-contact.png"
+  }
+]

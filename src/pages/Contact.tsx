@@ -86,8 +86,8 @@ export const Contact: React.FC = () => {
                 <Mail className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-bold text-slate-900">Email Inquiries</h3>
-                  <a href="mailto:sales@successpulse.co" className="hover:text-blue-600 transition-colors mt-0.5 block">sales@successpulse.co</a>
-                  <a href="mailto:info@successpulse.co" className="hover:text-blue-600 transition-colors block">info@successpulse.co</a>
+                  <a href="mailto:sales@successpulse.co" className="inline-flex min-h-6 items-center hover:text-blue-600 transition-colors mt-0.5">sales@successpulse.co</a>
+                  <a href="mailto:info@successpulse.co" className="inline-flex min-h-6 items-center hover:text-blue-600 transition-colors">info@successpulse.co</a>
                 </div>
               </div>
 
@@ -95,7 +95,7 @@ export const Contact: React.FC = () => {
                 <Phone className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-bold text-slate-900">Call Support</h3>
-                  <a href="tel:+27110000000" className="hover:text-blue-600 transition-colors mt-0.5 block">+27 (0) 11 000 0000</a>
+                  <a href="tel:+27110000000" className="inline-flex min-h-6 items-center hover:text-blue-600 transition-colors mt-0.5">+27 (0) 11 000 0000</a>
                   <span className="text-slate-450 block mt-0.5">Monday – Friday: 08:00 AM – 05:00 PM (GMT+2)</span>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export const Contact: React.FC = () => {
                     onClick={resetForm}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
                   >
-                    <ArrowLeft className="h-4 w-4" /> Book another demonstration
+                    <ArrowLeft className="h-4 w-4" /> Schedule another discovery call
                   </button>
                 </div>
               ) : (
@@ -285,7 +285,7 @@ export const Contact: React.FC = () => {
                       <>Registering Demo Account...</>
                     ) : (
                       <>
-                        Book My Consultation <Send className="h-4.5 w-4.5" />
+                        Schedule Discovery Call <Send className="h-4.5 w-4.5" />
                       </>
                     )}
                   </Button>

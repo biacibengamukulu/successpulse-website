@@ -3,12 +3,14 @@ import React from 'react';
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'white';
   size?: 'sm' | 'md' | 'lg';
+  as?: 'button' | 'span';
   children: React.ReactNode;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'md',
+  as = 'button',
   className = '',
   children,
   ...props
@@ -29,11 +31,14 @@ export const Button: React.FC<ButtonProps> = ({
     lg: 'px-6 py-3.5 text-base',
   };
 
+  const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+
+  if (as === 'span') {
+    return <span className={classes}>{children}</span>;
+  }
+
   return (
-    <button
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
-      {...props}
-    >
+    <button className={classes} {...props}>
       {children}
     </button>
   );

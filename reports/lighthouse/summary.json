@@ -1,0 +1,101 @@
+[
+  {
+    "url": "http://127.0.0.1:4173/",
+    "html": "reports/lighthouse/home.report.html",
+    "json": "reports/lighthouse/home.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/platform",
+    "html": "reports/lighthouse/platform.report.html",
+    "json": "reports/lighthouse/platform.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/campaigns",
+    "html": "reports/lighthouse/campaigns.report.html",
+    "json": "reports/lighthouse/campaigns.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/collections",
+    "html": "reports/lighthouse/collections.report.html",
+    "json": "reports/lighthouse/collections.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/branch-ops",
+    "html": "reports/lighthouse/branch-ops.report.html",
+    "json": "reports/lighthouse/branch-ops.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/pricing",
+    "html": "reports/lighthouse/pricing.report.html",
+    "json": "reports/lighthouse/pricing.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/roadmap",
+    "html": "reports/lighthouse/roadmap.report.html",
+    "json": "reports/lighthouse/roadmap.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/about",
+    "html": "reports/lighthouse/about.report.html",
+    "json": "reports/lighthouse/about.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4173/contact",
+    "html": "reports/lighthouse/contact.report.html",
+    "json": "reports/lighthouse/contact.report.json",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    }
+  }
+]

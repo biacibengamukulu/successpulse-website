@@ -26,14 +26,13 @@ export const Navbar: React.FC = () => {
   }, [location]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
+    { name: 'Platform', path: '/platform' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Roadmap', path: '/roadmap' },
-    { name: 'About Us', path: '/about' },
+    { name: 'About', path: '/about' },
   ];
 
   const featuresLinks = [
-    { name: 'Platform Overview', path: '/platform', desc: 'Complete operation journey' },
     { name: 'Campaign Management', path: '/campaigns', desc: 'Field agent plans & prospects' },
     { name: 'Collections & Recovery', path: '/collections', desc: 'Allocation & smart worklist' },
     { name: 'Branch Operations', path: '/branch-ops', desc: 'Daily records, cash & audits' },
@@ -65,15 +64,17 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1.5">
-            <Link
-              to="/"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive('/') ? 'text-blue-600 bg-blue-50/50' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-              }`}
-            >
-              Home
-            </Link>
-
+            {navLinks.slice(0, 1).map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  isActive(link.path) ? 'text-blue-600 bg-blue-50/50' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
             {/* Features Dropdown */}
             <div className="relative group">
               <button
@@ -118,15 +119,10 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center">
             <Link to="/contact">
-              <Button variant="outline" size="sm">
+              <Button as="span" variant="primary" size="sm">
                 Book Demo
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="primary" size="sm">
-                Get Started
               </Button>
             </Link>
           </div>
@@ -154,6 +150,14 @@ export const Navbar: React.FC = () => {
               }`}
             >
               Home
+            </Link>
+            <Link
+              to="/platform"
+              className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
+                isActive('/platform') ? 'text-blue-600 bg-blue-50/50' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+              }`}
+            >
+              Platform
             </Link>
 
             {/* Platform Sub-links */}
@@ -188,13 +192,8 @@ export const Navbar: React.FC = () => {
 
             <div className="pt-4 flex flex-col sm:flex-row gap-3">
               <Link to="/contact" className="w-full">
-                <Button variant="outline" className="w-full">
+                <Button as="span" variant="primary" className="w-full">
                   Book Demo
-                </Button>
-              </Link>
-              <Link to="/contact" className="w-full">
-                <Button variant="primary" className="w-full">
-                  Get Started
                 </Button>
               </Link>
             </div>

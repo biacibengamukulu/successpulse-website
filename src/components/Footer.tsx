@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-slate-400 border-t border-slate-800">
+    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
       {/* Top CTA Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-slate-800">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 bg-gradient-to-r from-blue-900 to-indigo-950 p-8 rounded-3xl border border-blue-800/30">
@@ -20,13 +20,13 @@ export const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link to="/contact" className="w-full sm:w-auto">
-              <Button variant="white" className="w-full sm:w-auto">
-                Book a Free Demo
+              <Button as="span" variant="white" className="w-full sm:w-auto">
+                Book a Live Demo
               </Button>
             </Link>
             <Link to="/contact" className="w-full sm:w-auto">
-              <Button variant="primary" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 border-none">
-                Contact Sales
+              <Button as="span" variant="primary" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 border-none">
+                Schedule Discovery Call
               </Button>
             </Link>
           </div>
@@ -51,13 +51,13 @@ export const Footer: React.FC = () => {
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3">
-              <a href="#" className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-blue-600 transition-all">
+              <a href="https://successpulse.co" aria-label="Visit SuccessPulse website" className="p-3 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-blue-600 transition-all">
                 <Globe className="h-4 w-4" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-blue-500 transition-all">
+              <a href="https://www.linkedin.com/company/successpulse" aria-label="Follow SuccessPulse on LinkedIn" className="p-3 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-blue-500 transition-all">
                 <Share2 className="h-4 w-4" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-emerald-600 transition-all">
+              <a href="mailto:info@successpulse.co" aria-label="Email SuccessPulse support" className="p-3 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-emerald-600 transition-all">
                 <MessageSquare className="h-4 w-4" />
               </a>
             </div>
@@ -128,12 +128,12 @@ export const Footer: React.FC = () => {
 
       {/* Bottom Legal bar */}
       <div className="bg-slate-950 py-6 border-t border-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-300">
           <p>© {currentYear} SuccessPulse. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-slate-350 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-350 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-slate-350 transition-colors">Cookie Settings</a>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
+            <Link to="/contact" className="inline-flex min-h-6 items-center hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="inline-flex min-h-6 items-center hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/contact" className="inline-flex min-h-6 items-center hover:text-white transition-colors">Cookie Settings</Link>
           </div>
         </div>
       </div>

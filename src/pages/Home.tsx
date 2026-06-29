@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import { 
   TrendingUp, Shield, BarChart3, ArrowRight, CheckCircle2, 
   Map, UserCheck, DollarSign, Wallet, ClipboardCheck, ArrowUpRight,
-  Sparkles, Calendar, Smartphone
+  Sparkles, Calendar, Smartphone, Building2, Banknote, UsersRound, ClipboardList, LockKeyhole, WifiOff
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { DashboardMock } from '../components/DashboardMock';
+import { ProductScreenshot } from '../components/ProductScreenshot';
+import { CountUpMetric } from '../components/CountUpMetric';
 
 export const Home: React.FC = () => {
   const pillars = [
@@ -55,6 +56,24 @@ export const Home: React.FC = () => {
     { num: '04', title: 'Approve & Reconcile', desc: 'Branch managers review records, reconcile cash/expenses, and post ledger balances.' },
   ];
 
+  const valueStrip = [
+    '4 operational pillars',
+    '11 operational workflows',
+    'Role-based security',
+    'Full audit trail',
+    'Offline-capable field operations',
+    'Built for African lending operations'
+  ];
+
+  const trustCards = [
+    { icon: Building2, title: 'Microfinance & branch lenders', desc: 'Coordinate branch teams, consultants, collections, and daily cash controls.' },
+    { icon: Banknote, title: 'Payroll and debit-order lenders', desc: 'Track debit-order follow-ups, PTP commitments, and field recovery activity.' },
+    { icon: UsersRound, title: 'Collection teams', desc: 'Route inactive accounts, capture POPs, and reconcile field collections faster.' },
+    { icon: ClipboardList, title: 'Finance and operations managers', desc: 'Give managers real-time visibility into visits, balances, receipts, and exceptions.' },
+    { icon: CheckCircle2, title: 'UAT-ready platform', desc: 'Structured for operational demos, branch acceptance testing, and staged rollout.' },
+    { icon: LockKeyhole, title: 'Audit-focused branch controls', desc: 'Reduce cash leakage with role-based approvals, immutable logs, and manager sign-off.' }
+  ];
+
   return (
     <div className="space-y-24 pb-20">
       {/* Hero Section */}
@@ -78,39 +97,53 @@ export const Home: React.FC = () => {
                 One platform for campaigns, lending, collections, and <span className="text-blue-500">branch control</span>.
               </h1>
               <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                Empower your field consultants, eliminate cash leakage, capture offline leads, and gain real-time visibility into branch performance. Built specifically for credit providers in emerging markets.
+                Recover more debt, reduce cash leakage, improve consultant productivity, and give managers real-time visibility across field visits, branch cash, and collections performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link to="/contact">
-                  <Button variant="primary" size="lg" className="w-full sm:w-auto gap-2">
-                    Book a Free Demo <ArrowRight className="h-4 w-4" />
+                  <Button as="span" variant="primary" size="lg" className="w-full sm:w-auto gap-2">
+                    Book a Live Demo <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
                 <Link to="/platform">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto text-white border-slate-700 hover:bg-slate-800">
+                  <Button as="span" variant="outline" size="lg" className="w-full sm:w-auto text-white border-slate-700 hover:bg-slate-800">
                     Explore Platform
                   </Button>
                 </Link>
               </div>
               {/* Trust Indicators */}
-              <div className="pt-6 border-t border-slate-800/80 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-xs text-slate-400">
+              <div className="pt-6 border-t border-slate-800/80 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-xs text-slate-300">
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-blue-500" /> Micro-finance Optimized
+                  <CheckCircle2 className="h-4 w-4 text-blue-500" /> Built for African lending
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-blue-500" /> Offline GPS Tracking
+                  <WifiOff className="h-4 w-4 text-blue-500" /> Offline-capable field ops
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-blue-500" /> Strict Manager Approvals
+                  <CheckCircle2 className="h-4 w-4 text-blue-500" /> Strict manager approvals
                 </div>
               </div>
             </div>
 
             {/* Dashboard Mock Preview */}
-            <div className="lg:col-span-6 w-full max-w-2xl mx-auto lg:max-w-none">
-              <DashboardMock />
+            <div className="lg:col-span-6 w-full max-w-2xl mx-auto lg:max-w-none animate-float">
+              <ProductScreenshot
+                src="/product-screenshots/dashboard.png"
+                alt="SuccessPulse field lending dashboard preview"
+                label="Dashboard Preview"
+              />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+        <div className="grid grid-cols-2 gap-3 rounded-3xl border border-slate-200 bg-white p-4 shadow-lg shadow-slate-200/60 sm:grid-cols-3 lg:grid-cols-6">
+          {valueStrip.map((item) => (
+            <div key={item} className="rounded-2xl bg-slate-50 px-3 py-4 text-center text-xs font-bold text-slate-700">
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -120,14 +153,14 @@ export const Home: React.FC = () => {
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             SuccessPulse Core Pillars
           </h2>
-          <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
-            The platform is built on 4 foundational modules covering campaigns, field collections, branch safety, and future loan servicing.
+            <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
+            The platform is built on 4 foundational modules that recover more debt, control branch cash, reduce leakage, and prepare your operation for full digital lending.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((pillar, idx) => (
-            <div key={idx} className="bg-white border border-slate-200/60 rounded-3xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+            <div key={idx} className="bg-white border border-slate-200/60 rounded-3xl p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
               <div className="space-y-5">
                 <div className={`p-3 rounded-2xl border w-fit ${pillar.color}`}>
                   <pillar.icon className="h-6 w-6" />
@@ -146,12 +179,38 @@ export const Home: React.FC = () => {
                 </ul>
               </div>
               <div className="pt-6">
-                <Link to={pillar.link} className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                  Learn More <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                <Link to={pillar.link} className="inline-flex min-h-6 items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                  Learn more about {pillar.title} <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white py-20 border-y border-slate-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Deployment Confidence</span>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Built for African Field Lending Operations
+            </h2>
+            <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
+              SuccessPulse is shaped for lenders managing branch offices, field consultants, cash/POS collections, and operational audit risk across emerging markets.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {trustCards.map((card) => (
+              <div key={card.title} className="rounded-3xl border border-slate-200/70 bg-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:bg-white hover:shadow-md">
+                <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600/10 text-blue-600">
+                  <card.icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-base font-bold text-slate-950">{card.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-slate-500">{card.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -198,16 +257,17 @@ export const Home: React.FC = () => {
             </p>
             <div className="space-y-4">
               {[
-                { title: 'Zero Cash Leakage', desc: 'Every collected cent is recorded on-site, backed by a matching receipt and manager sign-off.' },
-                { title: 'Offline-First Capability', desc: 'Agent plans, check-ins, and lead forms operate without network coverage, auto-syncing when back online.' },
-                { title: 'Reduced Operational Cost', desc: 'Say goodbye to manual audit reconciliations, excel updates, and agent path sheets.' },
+                { title: 'Recover More Debt', desc: 'Prioritize inactive ledgers, route cases to consultants, and capture promise-to-pay outcomes in the field.' },
+                { title: 'Reduce Cash Leakage', desc: 'Every collected cent is recorded on-site, backed by a matching receipt and manager sign-off.' },
+                { title: 'Control Branch Cash', desc: 'Track opening balances, working cash, expenses, vault limits, and daily closeout exceptions.' },
+                { title: 'Prepare for Digital Lending', desc: 'Move from field operations into a roadmap for credit scoring, statements, portals, and repayment scheduling.' },
               ].map((benefit, i) => (
                 <div key={i} className="flex gap-3">
                   <div className="h-5 w-5 bg-blue-500/10 text-blue-600 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="h-3 w-3" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-slate-950">{benefit.title}</h4>
+                    <div className="text-sm font-bold text-slate-950">{benefit.title}</div>
                     <p className="text-slate-500 text-xs leading-relaxed mt-0.5">{benefit.desc}</p>
                   </div>
                 </div>
@@ -220,26 +280,10 @@ export const Home: React.FC = () => {
             <div className="space-y-6 relative z-10">
               <h3 className="text-lg font-bold">Lender Operational Improvements</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-850">
-                  <span className="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Field Productivity</span>
-                  <div className="text-3xl font-bold text-white mt-1">+38%</div>
-                  <p className="text-slate-500 text-[10px] mt-1">Average increase in daily visits per consultant.</p>
-                </div>
-                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-850">
-                  <span className="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Bad Debt Collections</span>
-                  <div className="text-3xl font-bold text-white mt-1">+24%</div>
-                  <p className="text-slate-500 text-[10px] mt-1">Recovery rate improvement on inactive customer imports.</p>
-                </div>
-                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-850">
-                  <span className="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Audit Time</span>
-                  <div className="text-3xl font-bold text-white mt-1">-80%</div>
-                  <p className="text-slate-500 text-[10px] mt-1">Reduction in daily cash audit matching tasks.</p>
-                </div>
-                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-850">
-                  <span className="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Reconciled Errors</span>
-                  <div className="text-3xl font-bold text-white mt-1">0%</div>
-                  <p className="text-slate-500 text-[10px] mt-1">Discrepancy rates after dual approval integration.</p>
-                </div>
+                <CountUpMetric value={38} prefix="+" suffix="%" label="Field productivity lift" />
+                <CountUpMetric value={24} prefix="+" suffix="%" label="Recovery rate improvement" />
+                <CountUpMetric value={80} prefix="-" suffix="%" label="Cash audit time reduction" />
+                <CountUpMetric value={0} suffix="%" label="Target reconciled errors" />
               </div>
             </div>
           </div>
@@ -289,17 +333,17 @@ export const Home: React.FC = () => {
             </h2>
           </div>
           <Link to="/pricing">
-            <Button variant="outline" className="gap-1 bg-white">
-              View Detailed Pricing <ArrowRight className="h-4 w-4" />
+            <Button as="span" variant="outline" className="gap-1 bg-white">
+              Request Pricing <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: 'Starter', desc: 'For independent lenders starting field automation.', price: 'Contact Sales' },
-            { name: 'Growth', desc: 'Perfect for established operations with multiple branch offices.', price: 'Contact Sales', highlight: true },
-            { name: 'Enterprise', desc: 'Custom enterprise settings, unlimited branches, dedicated integrations.', price: 'Contact Sales' }
+            { name: 'Starter', desc: 'For independent lenders starting field automation.', price: 'Schedule Discovery Call' },
+            { name: 'Growth', desc: 'Perfect for established operations with multiple branch offices.', price: 'Schedule Discovery Call', highlight: true },
+            { name: 'Enterprise', desc: 'Custom enterprise settings, unlimited branches, dedicated integrations.', price: 'Schedule Discovery Call' }
           ].map((tier, i) => (
             <div key={i} className={`bg-white border rounded-3xl p-6 flex flex-col justify-between shadow-xs ${
               tier.highlight ? 'border-blue-600 ring-1 ring-blue-600 bg-blue-50/10' : 'border-slate-200/70'
@@ -316,8 +360,8 @@ export const Home: React.FC = () => {
               </div>
               <div className="pt-6">
                 <Link to="/contact">
-                  <Button variant={tier.highlight ? 'primary' : 'outline'} className="w-full text-xs">
-                    Contact Us for Pricing
+                  <Button as="span" variant={tier.highlight ? 'primary' : 'outline'} className="w-full text-xs">
+                  Request Pricing
                   </Button>
                 </Link>
               </div>
@@ -353,7 +397,7 @@ export const Home: React.FC = () => {
             </div>
             <div className="pt-4">
               <Link to="/roadmap">
-                <Button variant="white" className="gap-1">
+                <Button as="span" variant="white" className="gap-1">
                   View Full Roadmap <ArrowUpRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -375,7 +419,7 @@ export const Home: React.FC = () => {
                     {item.phase}
                   </span>
                   <div>
-                    <h4 className="text-xs font-semibold text-white">{item.title}</h4>
+                    <div className="text-xs font-semibold text-white">{item.title}</div>
                     <p className="text-[10px] text-slate-500 mt-0.5">{item.desc}</p>
                   </div>
                 </div>
@@ -395,20 +439,20 @@ export const Home: React.FC = () => {
 
           <div className="relative z-10 space-y-6 max-w-2xl mx-auto">
             <h2 className="text-3xl font-extrabold sm:text-4xl">
-              Get Started with SuccessPulse Today
+              Book a Live Demo with SuccessPulse
             </h2>
             <p className="text-blue-100 text-sm font-light leading-relaxed">
-              Book a live demonstration tailored specifically to your branch size and collection workflow. Learn how other credit teams improved recovery rates by 24% in the first quarter of deployment.
+              Book a live demonstration tailored to your branch size, collections workflow, manager controls, and digital lending roadmap.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button variant="white" size="lg" className="w-full sm:w-auto text-blue-650 hover:bg-slate-100 font-bold">
-                  Book a Consultation
+                <Button as="span" variant="white" size="lg" className="w-full sm:w-auto text-blue-650 hover:bg-slate-100 font-bold">
+                  Book a Live Demo
                 </Button>
               </Link>
               <Link to="/platform">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto text-white border-white/35 hover:bg-white/10">
-                  Read Product Brochure
+                <Button as="span" variant="outline" size="lg" className="w-full sm:w-auto text-white border-white/35 hover:bg-white/10">
+                  Explore Platform
                 </Button>
               </Link>
             </div>

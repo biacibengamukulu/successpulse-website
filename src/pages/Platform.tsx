@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
+import { ProductScreenshot } from '../components/ProductScreenshot';
 
 export const Platform: React.FC = () => {
   const steps = [
@@ -106,6 +107,25 @@ export const Platform: React.FC = () => {
         title="From Campaigns to Audited Close: The Full Operations Lifecycle" 
         subtitle="Manage leads, route collection agents, log POS captures, verify petty cash, and balance branch vaults in one synchronized fintech system."
       />
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="text-center max-w-3xl mx-auto space-y-4">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Product Preview</span>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+            Real Screenshots Ready, Mock Frames Today
+          </h2>
+          <p className="text-slate-500 text-sm">
+            These premium frames use the final screenshot paths requested for staging. Real SuccessPulse product captures can replace the placeholder PNGs without changing page layouts.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <ProductScreenshot src="/product-screenshots/campaigns.png" alt="SuccessPulse campaign management preview" label="Campaigns" />
+          <ProductScreenshot src="/product-screenshots/collections.png" alt="SuccessPulse collections workflow preview" label="Collections" />
+          <ProductScreenshot src="/product-screenshots/daily-record.png" alt="SuccessPulse daily branch record preview" label="Daily Record" />
+          <ProductScreenshot src="/product-screenshots/reports.png" alt="SuccessPulse reports and audit preview" label="Reports" />
+        </div>
+      </section>
 
       {/* Main Operations Flow Map */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -213,13 +233,13 @@ export const Platform: React.FC = () => {
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button variant="primary" className="font-bold">
-                Book My Free Demo
+              <Button as="span" variant="primary" className="font-bold">
+                Book a Live Demo
               </Button>
             </Link>
             <Link to="/pricing">
-              <Button variant="outline" className="font-bold bg-white">
-                View Pricing Plans
+              <Button as="span" variant="outline" className="font-bold bg-white">
+                Request Pricing
               </Button>
             </Link>
           </div>

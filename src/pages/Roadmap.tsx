@@ -122,7 +122,7 @@ export const Roadmap: React.FC = () => {
           </p>
           <div className="pt-2">
             <Link to="/contact">
-              <Button variant="primary" className="font-bold gap-2 bg-blue-600 hover:bg-blue-500">
+              <Button as="span" variant="primary" className="font-bold gap-2 bg-blue-600 hover:bg-blue-500">
                 <MessageSquare className="h-4 w-4" /> Request Board Access
               </Button>
             </Link>

@@ -11,7 +11,7 @@ export const Pricing: React.FC = () => {
     {
       name: 'Starter',
       description: 'Ideal for localized microfinance businesses starting to automate field visits.',
-      price: 'Contact Sales',
+      price: 'Schedule Discovery Call',
       period: 'per month',
       features: [
         'Up to 15 Field Agents',
@@ -23,13 +23,13 @@ export const Pricing: React.FC = () => {
         'Manager approvals queue',
         'Weekly CSV ledger exports'
       ],
-      cta: 'Contact us for pricing',
+      cta: 'Request Pricing',
       highlight: false
     },
     {
       name: 'Growth',
       description: 'Optimized for established lending networks operating multiple branches.',
-      price: 'Contact Sales',
+      price: 'Schedule Discovery Call',
       period: 'per month',
       features: [
         'Up to 75 Field Agents',
@@ -43,13 +43,13 @@ export const Pricing: React.FC = () => {
         'Daily balancing & audit logs',
         'SMS PTP payment reminders'
       ],
-      cta: 'Contact us for pricing',
+      cta: 'Request Pricing',
       highlight: true
     },
     {
       name: 'Enterprise',
       description: 'Built for large-scale payroll lenders and nationwide collections networks.',
-      price: 'Contact Sales',
+      price: 'Schedule Discovery Call',
       period: 'tailored setup',
       features: [
         'Unlimited Field Agents',
@@ -62,7 +62,7 @@ export const Pricing: React.FC = () => {
         '24/7 Priority support hotline',
         'Dedicated Account Manager'
       ],
-      cta: 'Contact us for pricing',
+      cta: 'Request Pricing',
       highlight: false
     }
   ];
@@ -143,7 +143,7 @@ export const Pricing: React.FC = () => {
               )}
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-950">{tier.name}</h3>
+                  <h2 className="text-xl font-bold text-slate-950">{tier.name}</h2>
                   <p className="text-slate-500 text-xs leading-relaxed mt-2">{tier.description}</p>
                 </div>
                 <div className="border-y border-slate-100 py-6">
@@ -161,7 +161,7 @@ export const Pricing: React.FC = () => {
               </div>
               <div className="pt-8 mt-8 border-t border-slate-100">
                 <Link to="/contact">
-                  <Button variant={tier.highlight ? 'primary' : 'outline'} className="w-full">
+                  <Button as="span" variant={tier.highlight ? 'primary' : 'outline'} className="w-full">
                     {tier.cta}
                   </Button>
                 </Link>
@@ -229,8 +229,8 @@ export const Pricing: React.FC = () => {
           </p>
           <div className="pt-2">
             <Link to="/contact">
-              <Button variant="primary" className="font-bold gap-2">
-                <Mail className="h-4 w-4" /> Contact Custom Accounts
+              <Button as="span" variant="primary" className="font-bold gap-2">
+                <Mail className="h-4 w-4" /> Request Pricing
               </Button>
             </Link>
           </div>
