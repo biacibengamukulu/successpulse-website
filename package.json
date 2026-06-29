@@ -1,0 +1,33 @@
+{
+  "name": "successpulse",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "milestone:assets": "node scripts/generate-milestone-assets.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.22.0",
+    "puppeteer": "^24.43.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "lighthouse": "^12.8.2",
+    "oxlint": "^1.69.0",
+    "tailwindcss": "^4.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.0"
+  }
+}
